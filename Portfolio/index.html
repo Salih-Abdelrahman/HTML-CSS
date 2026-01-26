@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salih's Portfolio</title>
+<style>
+  /* GENERAL STYLING */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #ff8a00, #e52e71);
+    color: white;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* FIXED NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #222;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #ffdd57;
+}
+
+/* CENTERED IMAGE WITH FILTER + ROUNDED EDGES */
+.profile-img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 20px;
+    filter: brightness(80%) saturate(120%);
+}
+
+/* TWO COLUMN LAYOUT */
+.two-columns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.column {
+    width: 40%;
+    height: 200px;
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* TABLE STYLING */
+table {
+    margin: 0 auto;
+    width: 60%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.2);
+}
+
+th {
+    background: #000;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid white;
+}
+
+/* TEXT OVER IMAGE */
+.image-text-container {
+    position: relative;
+    display: inline-block;
+}
+
+.overlay-img {
+    width: 600px;
+    border-radius: 10px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* IMAGE OVERLAY FADE */
+.fade-container {
+    position: relative;
+    display: inline-block;
+}
+
+.fade-img {
+    width: 500px;
+    border-radius: 10px;
+    transition: opacity 0.5s;
+}
+
+.fade-container:hover .fade-img {
+    opacity: 0.3;
+}
+
+.fade-overlay {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.fade-container:hover .fade-overlay {
+    opacity: 1;
+}
+
+/* VIDEO */
+.video, .video2 {
+    width: 70%;
+    border-radius: 10px;
+}
+
+/* VIDEO TEXT OVERLAY */
+.video-overlay-container {
+    position: relative;
+    display: inline-block;
+}
+
+.video-overlay-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* PARAGRAPH HOVER EFFECT */
+.hover-para {
+    font-size: 20px;
+    transition: color 0.4s, transform 0.4s;
+}
+
+.hover-para:hover {
+    color: #000;
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- FIXED NAVBAR -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#howto">How To Create a Fixed Menu</a></li>
+    </ul>
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home" class="section">
+    <h1>Welcome to Salih's Portfolio</h1>
+
+    <!-- CENTERED IMAGE WITH FILTER + ROUNDED EDGES -->
+    <img src="https://picsum.photos/350" class="profile-img" alt="Student Image">
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section">
+    <h2>About Me</h2>
+
+    <!-- TWO COLUMN LAYOUT -->
+    <div class="two-columns">
+        <div class="column">
+            <p>Hello! My name is Salih. I am a student learning HTML, CSS, and Bootstrap. I enjoy coding, design, and creating cool projects.</p>
+        </div>
+
+        <div class="column">
+            <p>My goal is to become a full‑stack developer and build creative, colorful, and interactive websites.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TABLE SECTION -->
+<section class="section">
+    <h2>My Skills</h2>
+
+    <table>
+        <tr>
+            <th>Skill</th>
+            <th>Experience Level</th>
+        </tr>
+        <tr>
+            <td>HTML</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Beginner</td>
+        </tr>
+    </table>
+</section>
+
+<!-- TEXT OVER IMAGE -->
+<section class="section">
+    <h2>Text Over Image</h2>
+
+    <div class="image-text-container">
+        <img src="https://picsum.photos/600/300" class="overlay-img">
+        <div class="overlay-text">Creativity Starts Here</div>
+    </div>
+</section>
+
+<!-- IMAGE OVERLAY FADE -->
+<section class="section">
+    <h2>Image Overlay Fade</h2>
+
+    <div class="fade-container">
+        <img src="https://picsum.photos/500/300" class="fade-img">
+        <div class="fade-overlay">Hover to Reveal</div>
+    </div>
+</section>
+
+<!-- VIDEO AUTOPLAY -->
+<section class="section">
+    <h2>Autoplay Video</h2>
+
+    <video autoplay muted loop class="video">
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support video.
+    </video>
+</section>
+
+<!-- VIDEO WITH TEXT OVERLAY -->
+<section class="section">
+    <h2>Video With Text Overlay</h2>
+
+    <div class="video-overlay-container">
+        <video autoplay muted loop class="video2">
+            <source src="your-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay-text">Welcome to My Portfolio</div>
+    </div>
+</section>
+
+<!-- PARAGRAPH HOVER EFFECT -->
+<section class="section">
+    <h2>Hover Effect on Paragraph</h2>
+    <p class="hover-para">Hover over this paragraph to see the effect.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2024 Salih's Portfolio</p>
+</footer>
+
+</body>
+</html>
